@@ -14,7 +14,7 @@ function App() {
     <Auth0Provider
       domain="misiontic-eucalipto.us.auth0.com"
       clientId="o6ZHWXgPtdoEsIVJ7n4CAKvSz3tuU5OJ"
-      redirectUri="http://localhost:3000/admin/productos"
+      redirectUri="https://fast-fjord-96164.herokuapp.com/admin/productos"
       audience="api-autenticacion-eucalipto"
     >
       <div className="App">
