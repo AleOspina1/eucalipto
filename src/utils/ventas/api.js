@@ -1,5 +1,7 @@
 import axios from "axios";
 
+const baseURL = "https://hidden-eyrie-45043.herokuapp.com"
+
 const getToken = () => {
   return `Bearer ${localStorage.getItem("token")}`;
 };
@@ -7,7 +9,7 @@ const getToken = () => {
 export const obtenerVenta = async (successCallback, errorCallBack) => {
   const options = {
     method: "GET",
-    url: `${baseURL}/ventas",
+    url: `${baseURL}/ventas/`,
     headers: {
       Authorization: getToken(),
     },
@@ -18,7 +20,7 @@ export const obtenerVenta = async (successCallback, errorCallBack) => {
 export const crearVenta = async (data, successCallback, errorCallBack) => {
   const options = {
     method: "POST",
-    url: `${baseURL}/ventas",
+    url: `${baseURL}/ventas/`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
     data,
   };
