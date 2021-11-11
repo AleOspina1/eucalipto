@@ -9,7 +9,7 @@ const getToken = () => {
 export const obtenerVenta = async (successCallback, errorCallBack) => {
   const options = {
     method: "GET",
-    url: `${baseURL}/sells/`,
+    url: `${baseURL}/ventas/`,
     headers: {
       Authorization: getToken(),
     },
@@ -20,7 +20,7 @@ export const obtenerVenta = async (successCallback, errorCallBack) => {
 export const crearVenta = async (data, successCallback, errorCallBack) => {
   const options = {
     method: "POST",
-    url: `${baseURL}/sells/`,
+    url: `${baseURL}/ventas/`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
     data,
   };
@@ -31,7 +31,7 @@ export const crearVenta = async (data, successCallback, errorCallBack) => {
 export const editarVenta = async (id, data, successCallback, errorCallBack) => {
   const options = {
     method: "PATCH",
-    url: `${baseURL}/sells/${id}`,
+    url: `${baseURL}/ventas/${id}`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
     data,
   };
@@ -42,7 +42,7 @@ export const editarVenta = async (id, data, successCallback, errorCallBack) => {
 export const eliminarVenta = async (id, successCallback, errorCallBack) => {
   const options = {
     method: "DELETE",
-    url: `${baseURL}/sells/${id}`,
+    url: `${baseURL}/ventas/${id}`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
   };
 
