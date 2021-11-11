@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const baseURL = "https://hidden-eyrie-45043.herokuapp.com"
+const baseURL = "http://localhost:8080"
 
 const getToken = () => {
   return `Bearer ${localStorage.getItem("token")}`;
@@ -9,7 +9,7 @@ const getToken = () => {
 export const obtenerVenta = async (successCallback, errorCallBack) => {
   const options = {
     method: "GET",
-    url: `${baseURL}/ventas/`,
+    url: `${baseURL}/sells/`,
     headers: {
       Authorization: getToken(),
     },
@@ -20,7 +20,7 @@ export const obtenerVenta = async (successCallback, errorCallBack) => {
 export const crearVenta = async (data, successCallback, errorCallBack) => {
   const options = {
     method: "POST",
-    url: `${baseURL}/ventas/`,
+    url: `${baseURL}/sells/`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
     data,
   };
@@ -31,7 +31,7 @@ export const crearVenta = async (data, successCallback, errorCallBack) => {
 export const editarVenta = async (id, data, successCallback, errorCallBack) => {
   const options = {
     method: "PATCH",
-    url: `${baseURL}/ventas/${id}`,
+    url: `${baseURL}/sells/${id}`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
     data,
   };
@@ -42,7 +42,7 @@ export const editarVenta = async (id, data, successCallback, errorCallBack) => {
 export const eliminarVenta = async (id, successCallback, errorCallBack) => {
   const options = {
     method: "DELETE",
-    url: `${baseURL}/ventas/${id}`,
+    url: `${baseURL}/sells/${id}`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
   };
 
