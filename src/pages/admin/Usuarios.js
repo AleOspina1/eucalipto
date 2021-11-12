@@ -126,6 +126,8 @@ const FilaUsuario = ({ usuario, setEjecutarConsulta }) => {
     editarUsuario(
       usuario._id,
       {
+        nombre: infoNuevoUsuario.nombre,
+        correo: infoNuevoUsuario.correo,
         estado: infoNuevoUsuario.estado,
         rol: infoNuevoUsuario.rol,
       },

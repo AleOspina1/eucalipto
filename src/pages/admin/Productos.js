@@ -99,7 +99,7 @@ const TablaProductos = ({ loading, listaProductos, setEjecutarConsulta }) => {
           <table className="tabla">
             <thead>
               <tr>
-                <th>Id producto</th>
+                <th>Id producto</th> 
                 <th>Descripción producto</th>
                 <th>Valor unitario</th>
                 <th>Estado</th>

@@ -9,7 +9,7 @@ const getToken = () => {
 export const obtenerUsuarios = async (successCallback, errorCallBack) => {
   const options = {
     method: "GET",
-    url: `${baseURL}/users/`,
+    url: `${baseURL}/user/`,
     headers: {
       Authorization: getToken(),
     },
@@ -20,7 +20,7 @@ export const obtenerUsuarios = async (successCallback, errorCallBack) => {
 export const obtenerVendedores = async (successCallback, errorCallBack) => {
   const options = {
     method: "GET",
-    url: `${baseURL}/users/Vendedor/`,
+    url: `${baseURL}/user/`,
     headers: {
       Authorization: getToken(),
     },
@@ -31,7 +31,7 @@ export const obtenerVendedores = async (successCallback, errorCallBack) => {
 export const editarUsuario = async (id, data, successCallback, errorCallBack) => {
   const options = {
     method: "PATCH",
-    url: `${baseURL}/users/${id}`,
+    url: `${baseURL}/user/${id}`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
     data,
   };
@@ -41,7 +41,7 @@ export const editarUsuario = async (id, data, successCallback, errorCallBack) =>
 export const eliminarUsuario = async (id, successCallback, errorCallBack) => {
   const options = {
     method: "DELETE",
-    url: `${baseURL}/users/${id}`,
+    url: `${baseURL}/user/${id}`,
     headers: { "Content-Type": "application/json", Authorization: getToken() },
   };
 
@@ -51,7 +51,7 @@ export const eliminarUsuario = async (id, successCallback, errorCallBack) => {
 export const obtenerDatosUsuarios = async (successCallback, errorCallBack) => {
   const options = {
     method: "GET",
-    url: `${baseURL}/users/self/`,
+    url: `${baseURL}/user`,
     headers: {
       Authorization: getToken(),
     },
